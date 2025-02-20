@@ -23,7 +23,7 @@ The Picture in Picture (PiP) Chrome extension allows users to switch to picture-
 
 ## Privacy Policy
 
-For information on how this extension handles your data, please refer to our [Privacy Policy](https://github.com/the-maniac/picture-in-picture/blob/main/PRIVACY.md).
+For information on how this extension handles your data, please refer to our [Privacy Policy](https://github.com/the-maniac/picture-in-picture/blob/master/PRIVACY.md).
 
 ## Author
 
