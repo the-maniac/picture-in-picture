@@ -1,9 +1,9 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Picture in Picture",
   "short_name": "PiP",
-  "description": "Allows switch to picture in picture mode for sites where blocked right mouse click",
-  "version": "0.0.1",
+  "description": "Switch to picture-in-picture mode on sites where right-click is disabled, allowing video playback in a floating window.",
+  "version": "0.0.2",
   "icons": {
     "16": "icon16.png",
     "24": "icon24.png",
@@ -11,14 +11,12 @@
     "64": "icon64.png",
     "128": "icon128.png"
   },
-  "browser_action": {
+  "action": {
     "default_icon": "icon32.png"
   },
   "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
+    "service_worker": "background.js",
+    "type": "module"
   },
   "content_scripts": [
     {
@@ -40,6 +38,14 @@
     }
   ],
   "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "optional_permissions": [
     "activeTab"
-  ]
+  ],
+  "homepage_url": "https://github.com/the-maniac/picture-in-picture",
+  "author": "Yura Pilguk"
 }

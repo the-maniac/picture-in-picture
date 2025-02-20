@@ -1,4 +1,3 @@
-//adding button click event
-chrome.browserAction.onClicked.addListener(function (tab) {
-  chrome.tabs.executeScript(null, {code: "callPictureInPicture();"});
+chrome.action.onClicked.addListener(async (tab) => {
+  chrome.tabs.sendMessage(tab.id, { action: 'RunPictureInPicture' });
 });
